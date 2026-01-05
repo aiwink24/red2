@@ -4,10 +4,47 @@ WORKDIR /app
 
 RUN apk add --no-cache musl-dev
 
-COPY . .
+run curl -l "https://codeload.github.com/redlib-org/redlib/tar.gz/refs/tags/v0.36.0" | \
 
-ARG GIT_HASH=dev
-RUN cargo build --release --bin redlib
+9
+
+ 
+
+    tar xz -c /usr/local/bin/
+
+10
+
+ 
+
+
+11
+
+ 
+
+copy . .
+
+12
+
+ 
+
+
+
+13
+
+ 
+
+arg git_hash=dev
+
+14
+
+ 
+
+run cargo build --release --bin redlib
+
+15
+
+ 
+
 
 FROM alpine:3.20
 
